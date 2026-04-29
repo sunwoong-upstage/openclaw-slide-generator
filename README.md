@@ -1,18 +1,20 @@
 # openclaw-slide-generator
 
-This repository contains:
+Harness Engineering 발표자료와 OpenClaw `slide-creator` 스킬을 담은 저장소입니다.
 
-- `slides/` — generated HTML presentation for Harness Engineering
-- `slides/speaker-notes.txt` — speaker notes for the presentation
-- `skill/slide-creator/` — reusable OpenClaw skill for generating HTML presentation slides
+## 바로 열기
 
-## Quick links
+- GitHub Pages 메인: `https://sunwoong-upstage.github.io/openclaw-slide-generator/`
+- 슬라이드: `https://sunwoong-upstage.github.io/openclaw-slide-generator/slides/`
 
-- Open `slides/index.html` in a browser to view the deck
-- Reuse `skill/slide-creator` as an OpenClaw skill folder
+## 저장소 구성
 
-## Included deliverables
+- `index.html` — GitHub Pages용 진입 페이지
+- `slides/` — 생성된 HTML 발표자료와 speaker notes
+- `skill/slide-creator/` — 재사용 가능한 OpenClaw 스킬 폴더
 
-- Harness Engineering 2026 presentation deck
+## 포함 산출물
+
+- Harness Engineering 2026 발표 deck
 - Speaker notes
 - Slide Creator skill source
