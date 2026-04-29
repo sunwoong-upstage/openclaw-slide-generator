@@ -2,91 +2,55 @@ Speaker Notes: 2026 Harness Engineering 트렌드
 ==================================================
 
 Slide 1: TITLE — 2026 Harness Engineering 트렌드
-  Notes: 안녕하세요. 오늘은 2026년 가장 주목받는 기술 중 하나인 Harness Engineering에 대해 이야기하겠습니다. 이 발표를 통해 여러분은 Harness Engineering이 무엇인지, 왜 중요한지, 그리고 누구에게나 쉽게 설명할 수 있게 될 것입니다.
+  Notes: 오늘 목표는 세 가지입니다. Harness Engineering이 무엇인지 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.
 
-Slide 2: SECTION — 오늘의 목표
+Slide 2: QUOTE
+  Notes: 이 한 문장을 먼저 잡아두면 전체 발표가 쉬워집니다. 오늘 모든 내용은 이 정의를 풀어 설명하는 과정입니다.
+
+Slide 3: SECTION — 왜 지금 이 개념이 중요한가
   (no notes)
 
-Slide 3: BULLETS
-  Notes: 이 발표 끝나면 여러분은 Harness Engineering을 친구, 부모님, 심지어 회사 CEO에게도 명확하게 설명할 수 있게 될 겁니다. 핵심은 복잡함을 단순하게 만드는 것입니다.
+Slide 4: BULLETS
+  Notes: 이제 중요한 것은 AI 하나를 잘 만드는 것이 아니라, 여러 요소를 안전하게 함께 움직이게 만드는 것입니다.
 
-Slide 4: SECTION — 왜 Harness Engineering인가?
+Slide 5: SECTION — 가장 쉬운 비유
   (no notes)
 
-Slide 5: BULLETS
-  Notes: 자율주행차는 수천 개의 센서와 AI 모델을 실시간으로 조율해야 합니다. 이런 시스템을 안전하게 관리하는 기술이 Harness Engineering입니다.
+Slide 6: TWO-COLUMN
+  Notes: 초등학생에게 설명하든 CEO에게 설명하든 이 비유는 강력합니다. 핵심은 조율과 통제입니다.
 
-Slide 6: SECTION — 간단한 비유로 이해하기
+Slide 7: SECTION — Harness Engineering의 4가지 핵심
   (no notes)
 
-Slide 7: TWO-COLUMN
-  Notes: Harness Engineering을 가장 쉽게 설명하는 비유는 마차의 마구입니다. 여러 말이 다른 방향으로 뛰지 않도록 조절하는 것처럼, 여러 AI가 엇갈리지 않게 만듭니다.
+Slide 8: TABLE
+  Notes: 이 네 가지를 기억하면 Harness Engineering을 거의 다 설명할 수 있습니다. 규칙, 모니터링, 안전장치, 투명성입니다.
 
-Slide 8: SECTION — 쉽게 정의하기
+Slide 9: SECTION — 2026년 트렌드 한눈에 보기
   (no notes)
 
-Slide 9: BULLETS
-  Notes: 쉽게 말하면 Harness Engineering은 AI 지휘자입니다. 여러 AI가 서로 방해하지 않고 협력하도록 만드는 기술입니다.
+Slide 10: TABLE
+  Notes: 이 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.
 
-Slide 10: SECTION — 2026년, 왜 지금 중요한가?
+Slide 11: SECTION — 실제로는 어디에 쓰이나
   (no notes)
 
-Slide 11: BULLETS
-  Notes: 이제는 AI가 돌아가기만 하면 되는 시대가 아닙니다. 제대로 통제되고 설명 가능해야 합니다.
+Slide 12: BULLETS
+  Notes: Harness Engineering은 실험실 개념이 아니라 현실 시스템을 안전하게 운영하기 위한 실무 기술입니다.
 
-Slide 12: SECTION — 핵심 구성요소 1. 규칙 설정
+Slide 13: SECTION — 누군가에게 설명할 때의 공식
   (no notes)
 
-Slide 13: BULLETS
-  Notes: Harness Engineering의 출발점은 규칙입니다. 무엇을 허용하고 금지하는지 선명해야 합니다.
+Slide 14: TWO-COLUMN
+  Notes: 설명은 복잡한 정의보다 구조가 중요합니다. 정의, 비유, 사례, 중요성 순서로 말하면 전달력이 올라갑니다.
 
-Slide 14: SECTION — 핵심 구성요소 2. 실시간 모니터링
+Slide 15: SECTION — 대상별로 이렇게 바꿔 말하면 된다
   (no notes)
 
-Slide 15: BULLETS
-  Notes: AI도 건강 상태를 봐야 합니다. 실시간 모니터링은 이상을 초기에 잡는 핵심입니다.
+Slide 16: TABLE
+  Notes: 상대에 따라 단어만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 묶고 조율하는 기술입니다.
 
-Slide 16: SECTION — 핵심 구성요소 3. 안전 장치
-  (no notes)
+Slide 17: QUOTE
+  Notes: 이 문장은 발표의 시대적 맥락을 강조합니다. AI 시대의 하네스는 선택이 아니라 기반 인프라입니다.
 
-Slide 17: BULLETS
-  Notes: 좋은 시스템은 절대 안 멈추는 시스템이 아니라, 위험할 때 안전하게 멈출 수 있는 시스템입니다.
-
-Slide 18: SECTION — 핵심 구성요소 4. 투명성
-  (no notes)
-
-Slide 19: BULLETS
-  Notes: 설명할 수 없는 AI는 믿기 어렵습니다. 투명성은 신뢰의 기반입니다.
-
-Slide 20: SECTION — 2026년 주요 트렌드
-  (no notes)
-
-Slide 21: TABLE
-  Notes: 2026년 트렌드는 크게 자율주행, 의료 AI, 스마트시티, 규제 강화로 볼 수 있습니다. 공통점은 모두 안전한 조율이 필요하다는 점입니다.
-
-Slide 22: SECTION — 실제 사례로 보기
-  (no notes)
-
-Slide 23: BULLETS
-  Notes: 핵심은 AI 하나가 잘하는가가 아니라, 여러 시스템이 함께 있을 때도 안전한가입니다.
-
-Slide 24: SECTION — 누군가에게 쉽게 설명하는 법
-  (no notes)
-
-Slide 25: TWO-COLUMN
-  Notes: 설명할 때는 정의만 던지지 말고 비유, 예시, 중요성 순서로 말하면 훨씬 잘 전달됩니다.
-
-Slide 26: SECTION — 대상별 설명 예시
-  (no notes)
-
-Slide 27: TABLE
-  Notes: 상대 수준에 맞춰 어휘만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 조율하는 기술이라는 점입니다.
-
-Slide 28: SECTION — 기억해야 할 한 문장
-  (no notes)
-
-Slide 29: QUOTE
-  Notes: 이 한 문장만 기억해도 누구에게든 설명을 시작할 수 있습니다.
-
-Slide 30: CLOSING — 이제 당신도 설명할 수 있습니다
-  Notes: 이제 Harness Engineering을 설명할 준비가 되었습니다. 핵심은 복잡함을 단순하게, 기술을 인간의 언어로 바꾸는 것입니다.
+Slide 18: CLOSING — 이제 당신도 설명할 수 있습니다
+  Notes: 이제 청중은 Harness Engineering을 한 문장으로 정의하고, 적절한 비유를 붙여 설명할 수 있습니다. 이것이 오늘의 north star입니다.
