@@ -60,6 +60,18 @@ body{margin:0;}
 .reveal .metric-value{font-size:1.8em;font-weight:800;color:var(--accent)!important;line-height:1.1;}
 .reveal .metric-label{font-size:0.85em;font-weight:700;margin-top:0.45rem;color:#0f172a!important;}
 .reveal .metric-detail{font-size:0.74em;color:#64748b!important;margin-top:0.35rem;line-height:1.5;}
+.reveal .takeaway-band{background:linear-gradient(135deg,#0f4c81 0%,#0369a1 100%);color:#ffffff!important;border-radius:22px;padding:1.4rem 1.6rem;box-shadow:0 18px 40px rgba(3,105,161,0.24);text-align:left;}
+.reveal .takeaway-band h2{color:#ffffff!important;font-size:1.7em;margin:0.15em 0 0.45em 0;}
+.reveal .band-kicker{font-size:0.72em;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#dbeafe!important;}
+.reveal .band-body p,.reveal .band-body li{color:#eff6ff!important;font-size:0.95em;line-height:1.6;}
+.reveal .feature-split{display:grid;grid-template-columns:1.15fr 1fr;gap:1.2rem;align-items:stretch;}
+.reveal .feature-lead,.reveal .feature-list{background:#ffffff;border:1px solid var(--border);border-radius:18px;padding:1.2rem;box-shadow:0 12px 28px rgba(15,23,42,0.05);text-align:left;}
+.reveal .feature-lead h2{margin-top:0;color:var(--accent)!important;}
+.reveal .feature-item{display:flex;gap:0.8rem;align-items:flex-start;padding:0.7rem 0;border-bottom:1px solid var(--border);}
+.reveal .feature-item:last-child{border-bottom:none;padding-bottom:0;}
+.reveal .feature-icon{width:2rem;height:2rem;border-radius:999px;background:#e0f2fe;color:var(--accent)!important;display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto;}
+.reveal .feature-title{font-size:0.88em;font-weight:800;color:#0f172a!important;}
+.reveal .feature-body{font-size:0.78em;color:#64748b!important;line-height:1.5;margin-top:0.2rem;}
 .reveal .slide-number{color:#64748b!important;font-size:0.6em;}
 .reveal .controls,.reveal .progress{color:var(--accent)!important;}
 """,
@@ -338,6 +350,44 @@ def render_slide(slide, idx):
             f'</section>'
         )
 
+    elif stype == "takeaway_band":
+        title = md_to_html(slide.get("title", ""))
+        body = md_block_to_html(slide.get("body", ""))
+        kicker = md_to_html(slide.get("kicker", ""))
+        kicker_html = f'<div class="band-kicker">{kicker}</div>' if kicker else ""
+        return (
+            f'<section>\n'
+            f'    <div class="takeaway-band">\n'
+            f'        {kicker_html}\n'
+            f'        <h2>{title}</h2>\n'
+            f'        <div class="band-body">{body}</div>\n'
+            f'    </div>\n'
+            f'{notes_html}\n'
+            f'</section>'
+        )
+
+    elif stype == "feature_split":
+        title = md_to_html(slide.get("title", ""))
+        lead = md_block_to_html(slide.get("lead", ""))
+        points = slide.get("points", [])
+        point_html = []
+        for point in points:
+            icon = md_to_html(point.get("icon", "•"))
+            ptitle = md_to_html(point.get("title", ""))
+            pbody = md_to_html(point.get("body", ""))
+            point_html.append(
+                f'<div class="feature-item"><div class="feature-icon">{icon}</div><div><div class="feature-title">{ptitle}</div><div class="feature-body">{pbody}</div></div></div>'
+            )
+        return (
+            f'<section>\n'
+            f'    <div class="feature-split">\n'
+            f'        <div class="feature-lead"><h2>{title}</h2><div>{lead}</div></div>\n'
+            f'        <div class="feature-list">{"".join(point_html)}</div>\n'
+            f'    </div>\n'
+            f'{notes_html}\n'
+            f'</section>'
+        )
+
     elif stype == "table":
         headers = slide.get("headers", [])
         rows = slide.get("rows", [])
@@ -458,6 +508,10 @@ def write_notes(data, output_path):
             lines.append(f"Slide {i}: CARD GRID")
         elif stype == "metric_strip":
             lines.append(f"Slide {i}: METRIC STRIP")
+        elif stype == "takeaway_band":
+            lines.append(f"Slide {i}: TAKEAWAY BAND")
+        elif stype == "feature_split":
+            lines.append(f"Slide {i}: FEATURE SPLIT")
         elif stype == "closing":
             lines.append(f"Slide {i}: CLOSING — {slide.get('content', '')}")
         else:

@@ -22,6 +22,8 @@
     { "type": "two_col", "left": "...", "right": "..." },
     { "type": "card_grid", "columns": 3, "cards": [{"title": "...", "body": "..."}] },
     { "type": "metric_strip", "metrics": [{"value": "...", "label": "...", "detail": "..."}] },
+    { "type": "takeaway_band", "title": "...", "body": "...", "kicker": "..." },
+    { "type": "feature_split", "title": "...", "lead": "...", "points": [{"icon": "...", "title": "...", "body": "..."}] },
     { "type": "table", "headers": [...], "rows": [[...]] },
     { "type": "closing", "content": "..." }
   ]
@@ -53,6 +55,8 @@
 | `two_col` | Two-column text layout. | `left` (HTML/Markdown string), `right` (HTML/Markdown string), optional `speaker_notes`. |
 | `card_grid` | Grid of card-style content blocks. | `cards` (array of objects with `title`, optional `eyebrow`, `body`), optional `columns`, optional `speaker_notes`. |
 | `metric_strip` | Highlight metrics in a compact visual row/grid. | `metrics` (array of objects with `value`, `label`, optional `detail`), optional `speaker_notes`. |
+| `takeaway_band` | Large visual takeaway band for one main message. | `title`, `body`, optional `kicker`, optional `speaker_notes`. |
+| `feature_split` | Split layout with lead narrative on one side and structured feature/point list on the other. | `title`, `lead`, `points` (array of objects with `icon`, `title`, `body`), optional `speaker_notes`. |
 | `table` | Data table. | `headers` (array), `rows` (array of arrays), optional `speaker_notes`. |
 | `closing` | Final slide / CTA. | `content` (heading), optional `subtitle`, optional `speaker_notes`. |
 

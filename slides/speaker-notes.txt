@@ -5,31 +5,31 @@ Slide 1: TITLE — 2026 Harness Engineering 트렌드
   Notes: 오늘 목표는 Harness Engineering을 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.
 
 Slide 2: METRIC STRIP
-  Notes: 이 슬라이드는 오늘 발표 전체를 한눈에 잡게 하는 요약판입니다. 청중은 이 네 가지 프레임만 기억해도 됩니다.
+  Notes: 이 슬라이드는 오늘 발표 전체를 한눈에 잡게 하는 요약판입니다.
 
-Slide 3: QUOTE
-  Notes: 이 한 문장을 먼저 잡아두면 전체 발표가 쉬워집니다. 오늘 모든 내용은 이 정의를 풀어 설명하는 과정입니다.
+Slide 3: TAKEAWAY BAND
+  Notes: 이 한 문장이 발표 전체의 앵커입니다. 이후 모든 슬라이드는 이 정의를 풀어주는 역할을 합니다.
 
 Slide 4: CARD GRID
-  Notes: 왜 지금 이 개념이 중요한지 세 가지 카드로 압축했습니다. 기술 변화, 위험, 경쟁력 이동입니다.
+  Notes: 왜 지금 이 개념이 중요한지 세 가지 카드로 압축했습니다.
 
-Slide 5: TWO-COLUMN
-  Notes: 초등학생에게 설명하든 CEO에게 설명하든 이 비유는 강력합니다. 핵심은 조율과 통제입니다.
+Slide 5: FEATURE SPLIT
+  Notes: 비유를 통해 개념을 직관으로 바꾸는 슬라이드입니다.
 
 Slide 6: CARD GRID
-  Notes: Harness Engineering의 4요소를 카드형으로 보여주면, 표보다 훨씬 빨리 이해됩니다.
+  Notes: Harness Engineering의 4요소를 카드형으로 보여줍니다.
 
 Slide 7: TABLE
-  Notes: 2026년 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.
+  Notes: 2026년 트렌드를 한눈에 정리합니다.
 
 Slide 8: CARD GRID
-  Notes: 실제 적용 사례를 카드형으로 보여주면 사용처가 명확해집니다.
+  Notes: 현실 적용처를 빠르게 보여주는 슬라이드입니다.
 
-Slide 9: TWO-COLUMN
-  Notes: 설명은 복잡한 정의보다 구조가 중요합니다. 정의, 비유, 사례, 중요성 순서로 말하면 전달력이 올라갑니다.
+Slide 9: FEATURE SPLIT
+  Notes: 청중이 설명하는 법까지 가져가도록 만드는 실전 슬라이드입니다.
 
-Slide 10: TABLE
-  Notes: 상대에 따라 단어만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 묶고 조율하는 기술입니다.
+Slide 10: TAKEAWAY BAND
+  Notes: 이 발표의 메시지를 한 번 더 강하게 박는 슬라이드입니다.
 
 Slide 11: CLOSING — 이제 당신도 설명할 수 있습니다
   Notes: 이제 청중은 Harness Engineering을 한 문장으로 정의하고, 적절한 비유를 붙여 설명할 수 있습니다. 이것이 오늘의 north star입니다.
