@@ -82,3 +82,5 @@ OpenClaw may implement these through subagents, separate sessions, or sequential
 - `references/loop-outcomes.md`
 - `references/handoff-contract.md`
 - `references/execution-protocol.md`
+- `references/role-profiles.md`
+- `references/checkpoint-template.md`

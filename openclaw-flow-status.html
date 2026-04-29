@@ -6,31 +6,37 @@
   <title>OpenClaw Flow Status</title>
   <style>
     body { font-family: Inter, Arial, sans-serif; background:#0f172a; color:#e2e8f0; padding:40px; }
-    .box { max-width:900px; margin:0 auto; background:#111827; padding:32px; border-radius:18px; }
+    .box { max-width:960px; margin:0 auto; background:#111827; padding:32px; border-radius:18px; }
     h1, h2 { color:#f8fbff; }
     p, li { color:#cbd5e1; line-height:1.7; }
     code { background:#1e293b; padding:2px 6px; border-radius:6px; }
+    .pill { display:inline-block; background:#0f4c81; color:white; border-radius:999px; padding:6px 10px; margin-right:8px; font-size:14px; }
     a { color:#38bdf8; }
   </style>
 </head>
 <body>
   <div class="box">
     <h1>OpenClaw Flow Status</h1>
-    <p><strong>Workflow:</strong> ralph-loop</p>
-    <p><strong>Status:</strong> in_progress</p>
-    <p><strong>Phase:</strong> planning</p>
-    <p><strong>Summary:</strong> Scaffolding an OpenClaw-native OMX-lite runtime with visible state, handoff contracts, and persistent completion loop patterns.</p>
+    <p><span class="pill">workflow: ralph-loop</span><span class="pill">phase: execution</span><span class="pill">status: in_progress</span></p>
+    <p><strong>Objective:</strong> Build an OpenClaw-native OMX-lite runtime layer with persistent completion loops, durable state, visible status, and role handoff structure.</p>
+    <h2>Completed</h2>
+    <ul>
+      <li>Created `ralph-loop` skill scaffold</li>
+      <li>Defined state model, loop outcomes, handoff contract, and execution protocol</li>
+      <li>Added role profiles and checkpoint template</li>
+      <li>Added visible status files and GitHub-exportable status surface</li>
+    </ul>
+    <h2>Next actions</h2>
+    <ol>
+      <li>Connect loop outcomes to real execution passes</li>
+      <li>Add automatic visible status updates during work</li>
+      <li>Add event routing and channel notification patterns later</li>
+    </ol>
     <h2>Artifacts</h2>
     <ul>
-      <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main/skill/slide-creator">slide-creator skill</a></li>
+      <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main/skill/ralph-loop">ralph-loop skill</a></li>
+      <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main/openclaw-flow">openclaw-flow directory</a></li>
       <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main">repository</a></li>
-    </ul>
-    <h2>New OpenClaw flow layer</h2>
-    <ul>
-      <li><code>skills/ralph-loop/</code> — persistent completion loop skill</li>
-      <li><code>openclaw-flow/STATUS.md</code> — human-readable state</li>
-      <li><code>openclaw-flow/state/flow-state.json</code> — machine-readable state</li>
-      <li><code>openclaw-flow/state/last-run.json</code> — latest run summary</li>
     </ul>
   </div>
 </body>

@@ -1,22 +1,30 @@
 # OpenClaw Flow Status
 
-## Current system
-- Runtime layer: OpenClaw native sessions + subagents
-- Flow model: OMX-inspired, adapted for OpenClaw
-- Goal: persistent completion loops, visible status, durable plans, structured execution
+## Workflow
+- Active workflow: `ralph-loop`
+- Current phase: `execution`
+- Status: `in_progress`
 
-## Current components
-- `openclaw-flow/plans/` — approved or draft plans
-- `openclaw-flow/state/` — machine-readable state files
-- `openclaw-flow/logs/` — run logs and checkpoints
-- `openclaw-flow/memory/` — flow-local memory shards
+## Objective
+Build an OpenClaw-native OMX-lite runtime layer with persistent completion loops, durable state, visible status, and role handoff structure.
 
-## In progress
-- Designing `ralph-loop` skill for persistent completion and verification loops
-- Defining OpenClaw-native state model and status surface
+## Completed
+- Created `ralph-loop` skill scaffold
+- Defined state model and loop outcomes
+- Added handoff contract and execution protocol
+- Added role profiles and checkpoint template
+- Added visible status files and GitHub-exportable status surface
 
-## Next recommended implementation
-1. Add machine-readable flow state JSON
-2. Add a lightweight planner/executor/verifier handoff contract
-3. Add GitHub/Discord-visible status output
-4. Add loop rules for continue / block / ask / done
+## Current result
+The OpenClaw flow layer now has a durable plan, machine-readable state, human-readable status, packaged skill output, and GitHub-visible artifacts.
+
+## Next actions
+1. Connect loop outcomes to real execution passes
+2. Add automatic visible status updates during work
+3. Add event routing and channel notification patterns later
+
+## Files to watch
+- `openclaw-flow/state/flow-state.json`
+- `openclaw-flow/state/last-run.json`
+- `openclaw-flow/plans/active-plan.md`
+- `openclaw-flow/logs/checkpoint-2026-04-29.md`
