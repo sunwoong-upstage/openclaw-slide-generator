@@ -1,78 +1,122 @@
 ---
 name: slide-creator
-description: Create polished HTML-based presentation slides from a topic or outline. Use when the user wants to build a presentation, deck, slides, or speaker materials. Triggers on phrases like 'make slides', 'create a presentation', 'build a deck', 'slides about', 'presentation on', '발표자료 만들어', '슬라이드 만들어', 'ppt', 'powerpoint', or 'deck'. Supports iterative improvement with a north-star objective and web research.
+description: Create polished HTML-based presentation slides from a topic, brief, or outline. Use when the user wants a presentation, deck, slides, speaker notes, or teaching material, especially for explainers, student presentations, strategy summaries, or fast first drafts. Triggers on phrases like 'make slides', 'create a presentation', 'build a deck', 'slides about', 'presentation on', '발표자료 만들어', '슬라이드 만들어', 'ppt', 'powerpoint', or 'deck'. Supports iterative improvement with a north-star objective, web research, and HTML reveal.js output.
 ---
 
 # Slide Creator
 
 Create polished, shareable HTML presentation slides from a user-provided topic or outline.
 
+Keep the workflow tight, explicit, and audience-aware. Favor clear teaching flow over slide count inflation.
+
 ## Workflow
 
-Follow this exact sequence. Do not skip steps.
+Follow this sequence.
 
-### Step 1: Elicit Context
+### Step 1: Collect context
 
-Ask the user the following required questions ONE AT A TIME (send as separate messages). Wait for answers before proceeding:
+Collect these inputs:
 
-1. **Topic / Objective**: "What topic or objective should the presentation cover?"
-2. **Depth**: "How deep should we go? (Overview / Intermediate / Deep-dive)"
-3. **Audience**: "Who is the audience and what is their background?"
-4. **Duration**: "How long is the presentation? (e.g. 10 min, 30 min, 60 min)"
-5. **Style**: "What visual style do you want? (Modern / Academic / Playful / Minimal / Corporate)"
-6. **North Star**: "What is the single most important outcome or key message? (north star)"
+1. Topic / objective
+2. Depth (Overview / Intermediate / Deep-dive)
+3. Audience and background
+4. Duration
+5. Style (Modern / Academic / Playful / Minimal / Corporate)
+6. North star outcome
 
-Record all answers. If the user provides multiple answers at once, still log them. If any are missing, default to: Overview, General audience, 15 min, Modern.
+Ask one at a time when needed, but if the user already supplied several answers, do not re-ask them.
 
-### Step 2: Research
+Defaults when missing:
+- Depth: Overview
+- Audience: General audience
+- Duration: 15 min
+- Style: Modern
 
-Build a research plan based on the topic and depth. Use `web_fetch` to gather credible, recent sources. Summarize findings in a compact research brief (title, key points, sources). Save this to a temporary note within the session context.
+### Step 2: Build a deck plan
 
-### Step 3: Generate Slides
+Before writing slides:
 
-Produce a complete HTML slide deck using the answered context and research brief.
+- Identify the deck type: teaching, executive update, or strategy/proposal.
+- Read `references/layout-patterns.md` and choose an appropriate story arc.
+- Map the requested duration to a realistic slide count.
+- Prefer fewer stronger slides over many thin slides.
 
-- Use `scripts/generate_slides.py` to create the slide HTML file. Pass the content as a JSON payload. See `references/slide-schema.md` for the JSON schema.
-- The script writes a standalone HTML file (reveal.js embedded, no external network dependencies required for viewing).
-- Output filename: `slides-<topic>-<timestamp>.html` inside `/data/workspace/output/slides/`.
-- Generate a matching speaker notes file: `slides-<topic>-<timestamp>-notes.txt`.
+### Step 3: Research only when useful
 
-### Step 4: Deliver & Review
+Build a research plan based on topic and depth.
 
-Present the slide deck to the user with:
-- Number of slides
-- Approximate duration estimate
-- File path(s)
+- Use `web_fetch` for credible and recent sources.
+- Prefer official docs, reputable institutions, major research or consulting firms, and technical primaries.
+- If search results are blocked or low quality, stop retrying the same URL. Switch source, rely on internal knowledge, or ask for sources.
+- Summarize findings into a compact research brief with title, key points, and sources.
 
-Then ask for feedback: "Any changes? I can adjust content, depth, style, or add/remove slides."
+See `references/research-prompts.md` for research query patterns.
 
-### Step 5: Recursive Improvement (North Star Loop)
+### Step 4: Generate slide content
 
-If the user requests changes, evaluate against the declared **North Star**.
+Produce a complete slide plan and JSON payload.
 
-1. Identify the gap between current output and the north star.
-2. Decide whether the change requires: (a) content revision only, (b) additional research, or (c) structural reorganization.
-3. Re-execute the affected step(s) and regenerate the slides.
-4. Repeat until the user is satisfied or the north star is clearly met.
+- Follow `references/slide-schema.md` exactly.
+- Use slide types intentionally, not mechanically.
+- Use `heading` slides sparingly. Too many section dividers weaken pacing.
+- Add speaker notes that help the presenter explain transitions, examples, and emphasis.
+- For short presentations, compress adjacent heading + bullet slides when possible.
 
-## Slide Content Rules
+### Step 5: Render the deck
 
-- Use Markdown-style formatting inside slides (headings, bullet lists, short paragraphs, code blocks).
-- Keep slide text scannable. Max 6 bullet points per slide. Max 20 words per bullet.
-- Use speaker notes for detail, nuance, and speaking cues.
-- Include at minimum: Title slide, Agenda, Context/Problem, Key Content (2-8 slides), Summary/Call-to-Action.
+Use `scripts/generate_slides.py` to create the slide HTML file.
 
-## Output Location
+- Output filename: `slides-<topic>-<timestamp>.html` inside `/data/workspace/output/slides/`
+- Generate matching notes file alongside the HTML output
+- The script writes a standalone reveal.js HTML deck
+
+### Step 6: Quality check before delivery
+
+Read `references/quality-checklist.md` and verify:
+
+- story quality
+- audience fit
+- visual readability
+- speaker usefulness
+- technical success
+
+If readability is weak, revise before delivering.
+
+### Step 7: Deliver and iterate
+
+Report:
+- number of slides
+- estimated duration
+- file paths
+- any caveats or assumptions
+
+Then invite feedback on:
+- content
+- depth
+- structure
+- style
+- slide count
+
+If the user requests changes, compare against the north star and revise only the affected step(s).
+
+## Slide content rules
+
+- Keep slide text scannable.
+- Prefer 3 to 5 bullets on a normal bullet slide.
+- Avoid more than 6 bullets unless the structure clearly demands it.
+- Prefer short phrases over full sentences.
+- Use examples and analogies when the user wants understanding, not just reporting.
+- Include at minimum: title, core setup, main content, summary/closing.
+
+## Output location
 
 - All slide files: `/data/workspace/output/slides/`
 - Create the directory if it does not exist.
 
-## Assets
+## Script and references
 
-- `assets/slide-template.html` — Base reveal.js template with Korean font support.
-- `assets/slide-themes/` — CSS themes (modern, academic, playful, minimal, corporate).
-
-## References
-
-- `references/slide-schema.md` — JSON schema expected by `generate_slides.py`.
-- `references/research-prompts.md` — Short prompt templates for web_fetch queries.
+- `scripts/generate_slides.py` — render JSON into standalone HTML + notes
+- `references/slide-schema.md` — required JSON schema
+- `references/research-prompts.md` — research query patterns
+- `references/layout-patterns.md` — recommended story arcs and compression rules
+- `references/quality-checklist.md` — pre-delivery review checklist

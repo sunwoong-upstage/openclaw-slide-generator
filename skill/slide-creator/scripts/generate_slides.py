@@ -353,10 +353,10 @@ def build_html(data):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape_html(title)}</title>
 <link rel="stylesheet" href="{fonts_url}">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
 <style>
 {theme_css}
 </style>
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
 </head>
 <body>
 <div class="reveal">
