@@ -1,0 +1,92 @@
+Speaker Notes: 2026 Harness Engineering 트렌드
+==================================================
+
+Slide 1: TITLE — 2026 Harness Engineering 트렌드
+  Notes: 안녕하세요. 오늘은 2026년 가장 주목받는 기술 중 하나인 Harness Engineering에 대해 이야기하겠습니다. 이 발표를 통해 여러분은 Harness Engineering이 무엇인지, 왜 중요한지, 그리고 누구에게나 쉽게 설명할 수 있게 될 것입니다.
+
+Slide 2: SECTION — 오늘의 목표
+  (no notes)
+
+Slide 3: BULLETS
+  Notes: 이 발표 끝나면 여러분은 Harness Engineering을 친구, 부모님, 심지어 회사 CEO에게도 명확하게 설명할 수 있게 될 겁니다. 핵심은 복잡함을 단순하게 만드는 것입니다.
+
+Slide 4: SECTION — 왜 Harness Engineering인가?
+  (no notes)
+
+Slide 5: BULLETS
+  Notes: 자율주행차는 수천 개의 센서와 AI 모델을 실시간으로 조율해야 합니다. 이런 시스템을 안전하게 관리하는 기술이 Harness Engineering입니다.
+
+Slide 6: SECTION — 간단한 비유로 이해하기
+  (no notes)
+
+Slide 7: TWO-COLUMN
+  Notes: Harness Engineering을 가장 쉽게 설명하는 비유는 마차의 마구입니다. 여러 말이 다른 방향으로 뛰지 않도록 조절하는 것처럼, 여러 AI가 엇갈리지 않게 만듭니다.
+
+Slide 8: SECTION — 쉽게 정의하기
+  (no notes)
+
+Slide 9: BULLETS
+  Notes: 쉽게 말하면 Harness Engineering은 AI 지휘자입니다. 여러 AI가 서로 방해하지 않고 협력하도록 만드는 기술입니다.
+
+Slide 10: SECTION — 2026년, 왜 지금 중요한가?
+  (no notes)
+
+Slide 11: BULLETS
+  Notes: 이제는 AI가 돌아가기만 하면 되는 시대가 아닙니다. 제대로 통제되고 설명 가능해야 합니다.
+
+Slide 12: SECTION — 핵심 구성요소 1. 규칙 설정
+  (no notes)
+
+Slide 13: BULLETS
+  Notes: Harness Engineering의 출발점은 규칙입니다. 무엇을 허용하고 금지하는지 선명해야 합니다.
+
+Slide 14: SECTION — 핵심 구성요소 2. 실시간 모니터링
+  (no notes)
+
+Slide 15: BULLETS
+  Notes: AI도 건강 상태를 봐야 합니다. 실시간 모니터링은 이상을 초기에 잡는 핵심입니다.
+
+Slide 16: SECTION — 핵심 구성요소 3. 안전 장치
+  (no notes)
+
+Slide 17: BULLETS
+  Notes: 좋은 시스템은 절대 안 멈추는 시스템이 아니라, 위험할 때 안전하게 멈출 수 있는 시스템입니다.
+
+Slide 18: SECTION — 핵심 구성요소 4. 투명성
+  (no notes)
+
+Slide 19: BULLETS
+  Notes: 설명할 수 없는 AI는 믿기 어렵습니다. 투명성은 신뢰의 기반입니다.
+
+Slide 20: SECTION — 2026년 주요 트렌드
+  (no notes)
+
+Slide 21: TABLE
+  Notes: 2026년 트렌드는 크게 자율주행, 의료 AI, 스마트시티, 규제 강화로 볼 수 있습니다. 공통점은 모두 안전한 조율이 필요하다는 점입니다.
+
+Slide 22: SECTION — 실제 사례로 보기
+  (no notes)
+
+Slide 23: BULLETS
+  Notes: 핵심은 AI 하나가 잘하는가가 아니라, 여러 시스템이 함께 있을 때도 안전한가입니다.
+
+Slide 24: SECTION — 누군가에게 쉽게 설명하는 법
+  (no notes)
+
+Slide 25: TWO-COLUMN
+  Notes: 설명할 때는 정의만 던지지 말고 비유, 예시, 중요성 순서로 말하면 훨씬 잘 전달됩니다.
+
+Slide 26: SECTION — 대상별 설명 예시
+  (no notes)
+
+Slide 27: TABLE
+  Notes: 상대 수준에 맞춰 어휘만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 조율하는 기술이라는 점입니다.
+
+Slide 28: SECTION — 기억해야 할 한 문장
+  (no notes)
+
+Slide 29: QUOTE
+  Notes: 이 한 문장만 기억해도 누구에게든 설명을 시작할 수 있습니다.
+
+Slide 30: CLOSING — 이제 당신도 설명할 수 있습니다
+  Notes: 이제 Harness Engineering을 설명할 준비가 되었습니다. 핵심은 복잡함을 단순하게, 기술을 인간의 언어로 바꾸는 것입니다.
