@@ -20,6 +20,8 @@
     { "type": "image", "src": "url or path", "caption": "..." },
     { "type": "quote", "text": "...", "author": "..." },
     { "type": "two_col", "left": "...", "right": "..." },
+    { "type": "card_grid", "columns": 3, "cards": [{"title": "...", "body": "..."}] },
+    { "type": "metric_strip", "metrics": [{"value": "...", "label": "...", "detail": "..."}] },
     { "type": "table", "headers": [...], "rows": [[...]] },
     { "type": "closing", "content": "..." }
   ]
@@ -49,6 +51,8 @@
 | `image` | Full-slide image. | `src` (URL or relative path), optional `caption`, optional `speaker_notes`. |
 | `quote` | Large centered quote. | `text`, optional `author`, optional `speaker_notes`. |
 | `two_col` | Two-column text layout. | `left` (HTML/Markdown string), `right` (HTML/Markdown string), optional `speaker_notes`. |
+| `card_grid` | Grid of card-style content blocks. | `cards` (array of objects with `title`, optional `eyebrow`, `body`), optional `columns`, optional `speaker_notes`. |
+| `metric_strip` | Highlight metrics in a compact visual row/grid. | `metrics` (array of objects with `value`, `label`, optional `detail`), optional `speaker_notes`. |
 | `table` | Data table. | `headers` (array), `rows` (array of arrays), optional `speaker_notes`. |
 | `closing` | Final slide / CTA. | `content` (heading), optional `subtitle`, optional `speaker_notes`. |
 

@@ -47,6 +47,19 @@ body{margin:0;}
 .reveal .closing-slide h2{font-size:2em;color:var(--accent)!important;}
 .reveal .two-col{display:flex;gap:2em;text-align:left;align-items:flex-start;}
 .reveal .two-col > div{flex:1;background:#ffffff;border:1px solid var(--border);border-radius:12px;padding:1em;box-shadow:0 8px 24px rgba(15,23,42,0.04);}
+.reveal .card-grid{display:grid;gap:1rem;margin-top:0.6rem;}
+.reveal .card-grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.reveal .card-grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.reveal .card-grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.reveal .info-card{background:#ffffff;border:1px solid var(--border);border-radius:14px;padding:1rem;box-shadow:0 10px 30px rgba(15,23,42,0.05);text-align:left;}
+.reveal .info-card h3{font-size:1.05em;margin:0.1em 0 0.45em 0;color:var(--accent)!important;}
+.reveal .card-eyebrow{font-size:0.72em;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#64748b!important;margin-bottom:0.5em;}
+.reveal .card-body p,.reveal .card-body li{font-size:0.82em;line-height:1.55;}
+.reveal .metric-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:0.8rem;}
+.reveal .metric-card{background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid var(--border);border-radius:16px;padding:1rem 1.1rem;box-shadow:0 12px 28px rgba(15,23,42,0.05);text-align:left;}
+.reveal .metric-value{font-size:1.8em;font-weight:800;color:var(--accent)!important;line-height:1.1;}
+.reveal .metric-label{font-size:0.85em;font-weight:700;margin-top:0.45rem;color:#0f172a!important;}
+.reveal .metric-detail{font-size:0.74em;color:#64748b!important;margin-top:0.35rem;line-height:1.5;}
 .reveal .slide-number{color:#64748b!important;font-size:0.6em;}
 .reveal .controls,.reveal .progress{color:var(--accent)!important;}
 """,
@@ -284,6 +297,47 @@ def render_slide(slide, idx):
             f'</section>'
         )
 
+    elif stype == "card_grid":
+        cards = slide.get("cards", [])
+        cols = min(max(int(slide.get("columns", 3)), 2), 4)
+        card_html = []
+        for card in cards:
+            title = md_to_html(card.get("title", ""))
+            body = md_block_to_html(card.get("body", ""))
+            eyebrow = md_to_html(card.get("eyebrow", ""))
+            eyebrow_html = f'<div class="card-eyebrow">{eyebrow}</div>' if eyebrow else ""
+            card_html.append(
+                f'<div class="info-card">{eyebrow_html}<h3>{title}</h3><div class="card-body">{body}</div></div>'
+            )
+        return (
+            f'<section>\n'
+            f'    <div class="card-grid cols-{cols}">\n'
+            f'        {"".join(card_html)}\n'
+            f'    </div>\n'
+            f'{notes_html}\n'
+            f'</section>'
+        )
+
+    elif stype == "metric_strip":
+        metrics = slide.get("metrics", [])
+        metric_html = []
+        for metric in metrics:
+            value = md_to_html(metric.get("value", ""))
+            label = md_to_html(metric.get("label", ""))
+            detail = md_to_html(metric.get("detail", ""))
+            detail_html = f'<div class="metric-detail">{detail}</div>' if detail else ""
+            metric_html.append(
+                f'<div class="metric-card"><div class="metric-value">{value}</div><div class="metric-label">{label}</div>{detail_html}</div>'
+            )
+        return (
+            f'<section>\n'
+            f'    <div class="metric-strip">\n'
+            f'        {"".join(metric_html)}\n'
+            f'    </div>\n'
+            f'{notes_html}\n'
+            f'</section>'
+        )
+
     elif stype == "table":
         headers = slide.get("headers", [])
         rows = slide.get("rows", [])
@@ -400,6 +454,10 @@ def write_notes(data, output_path):
             lines.append(f"Slide {i}: TWO-COLUMN")
         elif stype == "table":
             lines.append(f"Slide {i}: TABLE")
+        elif stype == "card_grid":
+            lines.append(f"Slide {i}: CARD GRID")
+        elif stype == "metric_strip":
+            lines.append(f"Slide {i}: METRIC STRIP")
         elif stype == "closing":
             lines.append(f"Slide {i}: CLOSING — {slide.get('content', '')}")
         else:

@@ -36,6 +36,19 @@ body{margin:0;}
 .reveal .closing-slide h2{font-size:2em;color:var(--accent)!important;}
 .reveal .two-col{display:flex;gap:2em;text-align:left;align-items:flex-start;}
 .reveal .two-col > div{flex:1;background:#ffffff;border:1px solid var(--border);border-radius:12px;padding:1em;box-shadow:0 8px 24px rgba(15,23,42,0.04);}
+.reveal .card-grid{display:grid;gap:1rem;margin-top:0.6rem;}
+.reveal .card-grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.reveal .card-grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.reveal .card-grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.reveal .info-card{background:#ffffff;border:1px solid var(--border);border-radius:14px;padding:1rem;box-shadow:0 10px 30px rgba(15,23,42,0.05);text-align:left;}
+.reveal .info-card h3{font-size:1.05em;margin:0.1em 0 0.45em 0;color:var(--accent)!important;}
+.reveal .card-eyebrow{font-size:0.72em;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#64748b!important;margin-bottom:0.5em;}
+.reveal .card-body p,.reveal .card-body li{font-size:0.82em;line-height:1.55;}
+.reveal .metric-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:0.8rem;}
+.reveal .metric-card{background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid var(--border);border-radius:16px;padding:1rem 1.1rem;box-shadow:0 12px 28px rgba(15,23,42,0.05);text-align:left;}
+.reveal .metric-value{font-size:1.8em;font-weight:800;color:var(--accent)!important;line-height:1.1;}
+.reveal .metric-label{font-size:0.85em;font-weight:700;margin-top:0.45rem;color:#0f172a!important;}
+.reveal .metric-detail{font-size:0.74em;color:#64748b!important;margin-top:0.35rem;line-height:1.5;}
 .reveal .slide-number{color:#64748b!important;font-size:0.6em;}
 .reveal .controls,.reveal .progress{color:var(--accent)!important;}
 
@@ -49,7 +62,14 @@ body{margin:0;}
     <p class="subtitle">정의부터 설명력까지, 10분 안에 끝내는 핵심 이해</p>
     <p class="meta">Tony를 위한 OpenClaw · 2026-04-29</p>
 
-    <aside class="notes">오늘 목표는 세 가지입니다. Harness Engineering이 무엇인지 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.</aside>
+    <aside class="notes">오늘 목표는 Harness Engineering을 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.</aside>
+</section>
+<section>
+    <div class="metric-strip">
+        <div class="metric-card"><div class="metric-value">1문장</div><div class="metric-label">핵심 정의</div><div class="metric-detail">복잡한 AI들을 안전하게 묶고 조율하는 기술</div></div><div class="metric-card"><div class="metric-value">4요소</div><div class="metric-label">핵심 구조</div><div class="metric-detail">규칙, 모니터링, 안전장치, 투명성</div></div><div class="metric-card"><div class="metric-value">4영역</div><div class="metric-label">주요 적용처</div><div class="metric-detail">자율주행, 의료, 로봇, 스마트시티</div></div><div class="metric-card"><div class="metric-value">10분</div><div class="metric-label">학습 목표</div><div class="metric-detail">이해하고 바로 설명할 수 있게 만들기</div></div>
+    </div>
+
+    <aside class="notes">이 슬라이드는 오늘 발표 전체를 한눈에 잡게 하는 요약판입니다. 청중은 이 네 가지 프레임만 기억해도 됩니다.</aside>
 </section>
 <section>
     <blockquote>
@@ -60,22 +80,14 @@ body{margin:0;}
     <aside class="notes">이 한 문장을 먼저 잡아두면 전체 발표가 쉬워집니다. 오늘 모든 내용은 이 정의를 풀어 설명하는 과정입니다.</aside>
 </section>
 <section>
-    <h2>왜 지금 이 개념이 중요한가</h2>
+    <div class="card-grid cols-3">
+        <div class="info-card"><div class="card-eyebrow">Why now</div><h3>AI가 복합 시스템이 되었다</h3><div class="card-body"><ul><li>단일 모델보다 여러 요소의 협업이 중요</li>
+<li>센서, 모델, 제어 로직이 동시에 움직인다</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Risk</div><h3>현실 세계에서는 실패 비용이 크다</h3><div class="card-body"><ul><li>자율주행, 의료, 로봇은 오류 비용이 높다</li>
+<li>그래서 안전한 통제가 핵심이 된다</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Shift</div><h3>경쟁력의 중심이 바뀐다</h3><div class="card-body"><ul><li>AI를 하나 더 만드는 것보다</li>
+<li>여러 AI를 믿고 맡길 수 있게 묶는 것이 중요하다</li></ul></div></div>
+    </div>
 
-</section>
-<section>
-    <ul>
-        <li>AI가 단일 모델에서 복합 시스템으로 빠르게 이동 중</li>
-        <li>자율주행, 의료, 로봇은 안전한 조율이 핵심</li>
-        <li>규제 강화로 설명 가능성과 통제 가능성이 중요해짐</li>
-        <li>앞으로는 코딩보다 시스템을 어떻게 묶을지가 경쟁력</li>
-    </ul>
-
-    <aside class="notes">이제 중요한 것은 AI 하나를 잘 만드는 것이 아니라, 여러 요소를 안전하게 함께 움직이게 만드는 것입니다.</aside>
-</section>
-<section>
-    <h2>가장 쉬운 비유</h2>
-
+    <aside class="notes">왜 지금 이 개념이 중요한지 세 가지 카드로 압축했습니다. 기술 변화, 위험, 경쟁력 이동입니다.</aside>
 </section>
 <section>
     <div class="two-col">
@@ -92,47 +104,19 @@ body{margin:0;}
     <aside class="notes">초등학생에게 설명하든 CEO에게 설명하든 이 비유는 강력합니다. 핵심은 조율과 통제입니다.</aside>
 </section>
 <section>
-    <h2>Harness Engineering의 4가지 핵심</h2>
+    <div class="card-grid cols-2">
+        <div class="info-card"><div class="card-eyebrow">Core 1</div><h3>규칙</h3><div class="card-body"><ul><li>무엇을 해야 하는지 정의</li>
+<li>무엇을 절대 하면 안 되는지 명시</li>
+<li>행동 범위를 통제</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Core 2</div><h3>모니터링</h3><div class="card-body"><ul><li>상태를 실시간으로 관찰</li>
+<li>이상 징후를 조기에 발견</li>
+<li>문제를 커지기 전에 대응</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Core 3</div><h3>안전장치</h3><div class="card-body"><ul><li>위험 시 즉시 중단 가능</li>
+<li>인간 개입 통로 확보</li>
+<li>안전한 실패 보장</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Core 4</div><h3>투명성</h3><div class="card-body"><ul><li>왜 그런 판단을 했는지 설명 가능</li>
+<li>원인 추적 가능</li>
+<li>신뢰와 검증의 기반</li></ul></div></div>
+    </div>
 
-</section>
-<section>
-    <table>
-        <thead>
-            <tr>
-            <th>핵심</th>
-            <th>무슨 뜻인가</th>
-            <th>왜 중요한가</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>규칙</td>
-            <td>무엇을 해야 하고 하지 말아야 하는지 정의</td>
-            <td>AI의 행동 범위를 통제</td>
-        </tr>
-        <tr>
-            <td>모니터링</td>
-            <td>실시간으로 상태를 관찰</td>
-            <td>이상을 조기에 발견</td>
-        </tr>
-        <tr>
-            <td>안전장치</td>
-            <td>위험 시 즉시 중단 가능</td>
-            <td>안전한 실패를 보장</td>
-        </tr>
-        <tr>
-            <td>투명성</td>
-            <td>왜 그런 판단을 했는지 설명 가능</td>
-            <td>신뢰와 검증 가능성 확보</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <aside class="notes">이 네 가지를 기억하면 Harness Engineering을 거의 다 설명할 수 있습니다. 규칙, 모니터링, 안전장치, 투명성입니다.</aside>
-</section>
-<section>
-    <h2>2026년 트렌드 한눈에 보기</h2>
-
+    <aside class="notes">Harness Engineering의 4요소를 카드형으로 보여주면, 표보다 훨씬 빨리 이해됩니다.</aside>
 </section>
 <section>
     <table>
@@ -167,29 +151,22 @@ body{margin:0;}
         </tbody>
     </table>
 
-    <aside class="notes">이 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.</aside>
+    <aside class="notes">2026년 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.</aside>
 </section>
 <section>
-    <h2>실제로는 어디에 쓰이나</h2>
+    <div class="card-grid cols-2">
+        <div class="info-card"><div class="card-eyebrow">Use case</div><h3>자율주행차</h3><div class="card-body"><ul><li>카메라, 레이더, 지도 AI를 함께 제어</li>
+<li>안전이 최우선인 의사결정 체계 필요</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Use case</div><h3>의료 AI</h3><div class="card-body"><ul><li>영상 분석, 기록 요약, 추천을 연결</li>
+<li>잘못된 판단을 줄이고 추적 가능해야 함</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Use case</div><h3>산업 로봇</h3><div class="card-body"><ul><li>사람과 같은 공간에서 움직임</li>
+<li>위험 행동을 즉시 막아야 함</li></ul></div></div><div class="info-card"><div class="card-eyebrow">Use case</div><h3>스마트시티</h3><div class="card-body"><ul><li>교통, 에너지, 치안 AI 연결</li>
+<li>시스템 간 충돌 없는 운영이 필요</li></ul></div></div>
+    </div>
 
-</section>
-<section>
-    <ul>
-        <li>자율주행차에서 카메라, 레이더, 판단 모델을 함께 제어</li>
-        <li>의료 AI에서 영상 분석, 기록 요약, 추천을 연결</li>
-        <li>산업 로봇에서 사람과 로봇의 안전한 공존을 보장</li>
-        <li>스마트시티에서 교통, 에너지, 치안을 충돌 없이 운영</li>
-    </ul>
-
-    <aside class="notes">Harness Engineering은 실험실 개념이 아니라 현실 시스템을 안전하게 운영하기 위한 실무 기술입니다.</aside>
-</section>
-<section>
-    <h2>누군가에게 설명할 때의 공식</h2>
-
+    <aside class="notes">실제 적용 사례를 카드형으로 보여주면 사용처가 명확해집니다.</aside>
 </section>
 <section>
     <div class="two-col">
-        <div><p><strong>짧은 공식</strong></p>
+        <div><p><strong>설명 공식</strong></p>
 <ul><li>한 줄 정의</li>
 <li>쉬운 비유</li>
 <li>실제 사례</li>
@@ -199,10 +176,6 @@ body{margin:0;}
     </div>
 
     <aside class="notes">설명은 복잡한 정의보다 구조가 중요합니다. 정의, 비유, 사례, 중요성 순서로 말하면 전달력이 올라갑니다.</aside>
-</section>
-<section>
-    <h2>대상별로 이렇게 바꿔 말하면 된다</h2>
-
 </section>
 <section>
     <table>
@@ -233,14 +206,6 @@ body{margin:0;}
     </table>
 
     <aside class="notes">상대에 따라 단어만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 묶고 조율하는 기술입니다.</aside>
-</section>
-<section>
-    <blockquote>
-        <p>앞으로의 경쟁력은 AI를 하나 더 만드는 데 있지 않고, 여러 AI를 믿고 맡길 수 있게 묶는 데 있다.</p>
-        
-    </blockquote>
-
-    <aside class="notes">이 문장은 발표의 시대적 맥락을 강조합니다. AI 시대의 하네스는 선택이 아니라 기반 인프라입니다.</aside>
 </section>
 <section class="closing-slide">
     <h2>이제 당신도 설명할 수 있습니다</h2>

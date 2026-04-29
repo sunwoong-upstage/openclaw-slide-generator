@@ -2,55 +2,34 @@ Speaker Notes: 2026 Harness Engineering 트렌드
 ==================================================
 
 Slide 1: TITLE — 2026 Harness Engineering 트렌드
-  Notes: 오늘 목표는 세 가지입니다. Harness Engineering이 무엇인지 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.
+  Notes: 오늘 목표는 Harness Engineering을 이해하고, 왜 중요한지 납득하고, 마지막에는 누구에게든 쉽게 설명할 수 있게 되는 것입니다.
 
-Slide 2: QUOTE
+Slide 2: METRIC STRIP
+  Notes: 이 슬라이드는 오늘 발표 전체를 한눈에 잡게 하는 요약판입니다. 청중은 이 네 가지 프레임만 기억해도 됩니다.
+
+Slide 3: QUOTE
   Notes: 이 한 문장을 먼저 잡아두면 전체 발표가 쉬워집니다. 오늘 모든 내용은 이 정의를 풀어 설명하는 과정입니다.
 
-Slide 3: SECTION — 왜 지금 이 개념이 중요한가
-  (no notes)
+Slide 4: CARD GRID
+  Notes: 왜 지금 이 개념이 중요한지 세 가지 카드로 압축했습니다. 기술 변화, 위험, 경쟁력 이동입니다.
 
-Slide 4: BULLETS
-  Notes: 이제 중요한 것은 AI 하나를 잘 만드는 것이 아니라, 여러 요소를 안전하게 함께 움직이게 만드는 것입니다.
-
-Slide 5: SECTION — 가장 쉬운 비유
-  (no notes)
-
-Slide 6: TWO-COLUMN
+Slide 5: TWO-COLUMN
   Notes: 초등학생에게 설명하든 CEO에게 설명하든 이 비유는 강력합니다. 핵심은 조율과 통제입니다.
 
-Slide 7: SECTION — Harness Engineering의 4가지 핵심
-  (no notes)
+Slide 6: CARD GRID
+  Notes: Harness Engineering의 4요소를 카드형으로 보여주면, 표보다 훨씬 빨리 이해됩니다.
 
-Slide 8: TABLE
-  Notes: 이 네 가지를 기억하면 Harness Engineering을 거의 다 설명할 수 있습니다. 규칙, 모니터링, 안전장치, 투명성입니다.
+Slide 7: TABLE
+  Notes: 2026년 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.
 
-Slide 9: SECTION — 2026년 트렌드 한눈에 보기
-  (no notes)
+Slide 8: CARD GRID
+  Notes: 실제 적용 사례를 카드형으로 보여주면 사용처가 명확해집니다.
 
-Slide 10: TABLE
-  Notes: 이 트렌드들을 묶는 공통 질문은 하나입니다. 어떻게 여러 AI를 믿고 현실에 배치할 것인가입니다.
-
-Slide 11: SECTION — 실제로는 어디에 쓰이나
-  (no notes)
-
-Slide 12: BULLETS
-  Notes: Harness Engineering은 실험실 개념이 아니라 현실 시스템을 안전하게 운영하기 위한 실무 기술입니다.
-
-Slide 13: SECTION — 누군가에게 설명할 때의 공식
-  (no notes)
-
-Slide 14: TWO-COLUMN
+Slide 9: TWO-COLUMN
   Notes: 설명은 복잡한 정의보다 구조가 중요합니다. 정의, 비유, 사례, 중요성 순서로 말하면 전달력이 올라갑니다.
 
-Slide 15: SECTION — 대상별로 이렇게 바꿔 말하면 된다
-  (no notes)
-
-Slide 16: TABLE
+Slide 10: TABLE
   Notes: 상대에 따라 단어만 바꾸면 됩니다. 본질은 늘 같습니다. 안전하게 묶고 조율하는 기술입니다.
 
-Slide 17: QUOTE
-  Notes: 이 문장은 발표의 시대적 맥락을 강조합니다. AI 시대의 하네스는 선택이 아니라 기반 인프라입니다.
-
-Slide 18: CLOSING — 이제 당신도 설명할 수 있습니다
+Slide 11: CLOSING — 이제 당신도 설명할 수 있습니다
   Notes: 이제 청중은 Harness Engineering을 한 문장으로 정의하고, 적절한 비유를 붙여 설명할 수 있습니다. 이것이 오늘의 north star입니다.
