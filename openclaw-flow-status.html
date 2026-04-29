@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw Flow Status</title>
+  <style>
+    body { font-family: Inter, Arial, sans-serif; background:#0f172a; color:#e2e8f0; padding:40px; }
+    .box { max-width:900px; margin:0 auto; background:#111827; padding:32px; border-radius:18px; }
+    h1, h2 { color:#f8fbff; }
+    p, li { color:#cbd5e1; line-height:1.7; }
+    code { background:#1e293b; padding:2px 6px; border-radius:6px; }
+    a { color:#38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>OpenClaw Flow Status</h1>
+    <p><strong>Workflow:</strong> ralph-loop</p>
+    <p><strong>Status:</strong> in_progress</p>
+    <p><strong>Phase:</strong> planning</p>
+    <p><strong>Summary:</strong> Scaffolding an OpenClaw-native OMX-lite runtime with visible state, handoff contracts, and persistent completion loop patterns.</p>
+    <h2>Artifacts</h2>
+    <ul>
+      <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main/skill/slide-creator">slide-creator skill</a></li>
+      <li><a href="https://github.com/sunwoong-upstage/openclaw-slide-generator/tree/main">repository</a></li>
+    </ul>
+    <h2>New OpenClaw flow layer</h2>
+    <ul>
+      <li><code>skills/ralph-loop/</code> — persistent completion loop skill</li>
+      <li><code>openclaw-flow/STATUS.md</code> — human-readable state</li>
+      <li><code>openclaw-flow/state/flow-state.json</code> — machine-readable state</li>
+      <li><code>openclaw-flow/state/last-run.json</code> — latest run summary</li>
+    </ul>
+  </div>
+</body>
+</html>

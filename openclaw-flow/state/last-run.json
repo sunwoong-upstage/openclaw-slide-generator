@@ -1,0 +1,8 @@
+{
+  "workflow": "ralph-loop",
+  "phase": "planning",
+  "status": "in_progress",
+  "updated_at": "2026-04-29T07:34:00Z",
+  "objective": "Build an OpenClaw-native OMX-lite runtime layer with persistent loops, state visibility, and role handoff structure.",
+  "next_action": "Publish role handoff contract and visible status surface."
+}

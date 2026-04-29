@@ -1,0 +1,13 @@
+{
+  "name": "openclaw-flow",
+  "workflow": "ralph-loop",
+  "status": "in_progress",
+  "phase": "planning",
+  "summary": "Scaffolding an OpenClaw-native OMX-lite runtime with visible state, handoff contracts, and persistent completion loop patterns.",
+  "lastUpdated": "2026-04-29T07:35:00Z",
+  "links": {
+    "statusMarkdown": "openclaw-flow/STATUS.md",
+    "flowState": "openclaw-flow/state/flow-state.json",
+    "lastRun": "openclaw-flow/state/last-run.json"
+  }
+}
